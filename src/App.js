@@ -1,10 +1,13 @@
 import logo from './logo.svg';
-import './style.css'
+import styles from './App.module.css'
+import { Title } from './Components';
+
 
 function App() {
   return (
-    <div className="App">
-      <h3>{process.env.NODE_ENV}</h3>
+    <div className={styles.App}>
+      <Title>{process.env.NODE_ENV}</Title>
+      <Title theme="dark">{process.env.NODE_ENV}</Title>
       <p>{process.env.REACT_APP_API_URL}</p>
       <img src="/logo192.png" alt=""/>
       <img src={logo} alt=""/>
